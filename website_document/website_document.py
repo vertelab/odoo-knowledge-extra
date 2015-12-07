@@ -21,10 +21,10 @@
 from cStringIO import StringIO
 from openerp import models, fields, api, _
 from openerp import SUPERUSER_ID
-from openerp import http, request
+from openerp import http
+from openerp.http import request
 #from openerp.http import request
 import werkzeug.urls
-
 
 
 class WebsiteDocument(http.Controller):
