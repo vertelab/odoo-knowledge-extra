@@ -33,6 +33,6 @@ class WebsiteDocument(http.Controller):
 
     @http.route(['/attachment/<model("ir.attachment"):attachment>/<string:file_name>'], type='http', auth="public", website=True)
     def get_attachment(self, attachment=None, file_name=None, **post):
-        if attachment:
+        if attachment and attachment.datas:
             return http.send_file(StringIO(attachment.datas.decode('base64')), filename=attachment.datas_fname.replace(' ', '_'), mimetype=attachment.mimetype, mtime=attachment.write_date, as_attachment=True)
 
