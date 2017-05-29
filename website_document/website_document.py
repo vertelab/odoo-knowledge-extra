@@ -25,11 +25,14 @@ from openerp import http
 from openerp.http import request
 #from openerp.http import request
 import werkzeug.urls
+import logging
+_logger = logging.getLogger(__name__)
 
 
 class WebsiteDocument(http.Controller):
 
     @http.route(['/attachment/<model("ir.attachment"):attachment>/<string:file_name>'], type='http', auth="public", website=True)
     def get_attachment(self, attachment=None, file_name=None, **post):
-        return http.send_file(StringIO(attachment.datas.decode('base64')), filename=attachment.datas_fname.replace(' ', '_'), mimetype=attachment.mimetype, mtime=attachment.write_date, as_attachment=True)
+        if attachment:
+            return http.send_file(StringIO(attachment.datas.decode('base64')), filename=attachment.datas_fname.replace(' ', '_'), mimetype=attachment.mimetype, mtime=attachment.write_date, as_attachment=True)
 
