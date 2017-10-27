@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015- Vertel AB (<http://www.vertel.se>).
+#    Copyright (C) 2017- Vertel AB (<http://www.vertel.se>).
 #
 #    This progrupdateam is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,10 +19,10 @@
 ##############################################################################
 
 from cStringIO import StringIO
-from openerp import models, fields, api, _
-from openerp import SUPERUSER_ID
-from openerp import http
-from openerp.http import request
+from odoo import models, fields, api, _
+from odoo import SUPERUSER_ID
+from odoo import http
+from odoo.http import request
 #from openerp.http import request
 import werkzeug.urls
 import logging
