@@ -35,6 +35,7 @@ Filename are used only for display purposes.
 
 """,
     'author': 'Vertel AB',
+    'license': 'AGPL-3',
     'depends': [
         'website',
         'document',
