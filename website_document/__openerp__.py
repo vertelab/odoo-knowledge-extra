@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015- Vertel AB (<http://www.vertel.se>).
+#    Copyright (C) 2015- Vertel Sverige AB (<http://www.vertel.se>).
 #
 #    This progrupdateam is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -34,7 +34,7 @@ Attachement are Odoo-attachment
 Filename are used only for display purposes.
 
 """,
-    'author': 'Vertel AB',
+    'author': 'Vertel Sverige AB',
     'license': 'AGPL-3',
     'depends': [
         'website',
